@@ -1,6 +1,6 @@
 <template>
-    <header class="w-full relative shadow-xl bg-slate-800 px-16 overflow-hidden">
-        <nav class="flex justify-between container mx-auto">
+    <header class="w-full relative shadow-xl bg-slate-800 overflow-hidden">
+        <nav class="flex justify-between container mx-auto px-16">
             <div class="flex items-center gap-x-2">
                 <svg @click="changeView(0)" class="w-8 h-8 stroke-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <title>Grid view</title>
@@ -45,13 +45,18 @@
         </nav>
     </header>
     <main class="relative bg-gradient-to-br from-slate-700 to-slate-900 w-full">
-        <div class="px-16 py-16 w-full min-h-screen">
+        <div class="mx-auto px-16 py-16 container min-h-screen">
             <slot />
         </div>
     </main>
     <footer class="border-t border-gray-300 bg-slate-800">
-        <div class="py-5 text-white">
-            Hello
+        <div class="container mx-auto px-16 py-6 flex flex-row justify-between">
+            <small class="text-sm font-medium text-white">
+                &copy; Joshua Wallace
+            </small>
+            <div>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
         </div>
     </footer>
 </template>
